@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DemoKKBeacon.RegistroSensores"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <!---->
+                    <RowDefinition Height="Auto"/>
+                    <!--1-->
+                    <RowDefinition Height="Auto"/>
+                    <!--2-->
+                    <RowDefinition Height="Auto"/>
+                    <!--3-->
+                    <RowDefinition Height="Auto"/>
+                    <!--4-->
+                    <RowDefinition Height="Auto"/>
+                    <!--5-->
+                    <RowDefinition Height="Auto"/>
+                    <!--6-->
+                    <RowDefinition Height="Auto"/>
+                    <!--8-->
+                    <RowDefinition Height="Auto"/>
+                    <!--9-->
+                    <RowDefinition Height="Auto"/>
+                    <!--10-->
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
+                    <Label
+                         Text="Datos Sensores"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         HorizontalTextAlignment="Center"
+                         FontSize="26"
+                         Margin="0,0,0,5"
+                         WidthRequest="300"
+                         TextColor="{OnPlatform Android=Black}"
+                         />
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
+                    <Label
+                
+                    Text="Ingrese el MAC del Sensor"
+                        TextColor="Black"
+                        FontSize="15"
+                        WidthRequest="300"
+                />
+                    <Frame
+                HasShadow="{OnPlatform Android=true,iOS=false}"
+                Padding="{OnPlatform Android=8,iOS=0}"
+                CornerRadius="{OnPlatform Android=7}"
+                >
+                        <Entry
+                    x:Name="MacTxtSensor"
+                    Placeholder="ECDSDF645654F0"
+                    Keyboard="Text"
+                    MaxLength="20"
+                    Text="{Binding MacTxt, Mode=TwoWay}"
+                    FontSize="{OnPlatform Android=15,iOS=16}"
+                    />
+                    </Frame>
+                </StackLayout>
+
+              
+
+                <StackLayout Grid.Row="8" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
+                     Text="Ingresar"
+                            TextColor="Black"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="{OnPlatform Android=15}"
+                            BackgroundColor="#fcfcfc"
+                            BorderColor="#f2f2f2"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                          Clicked="RegistroSensores_Clicked"
+                    />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

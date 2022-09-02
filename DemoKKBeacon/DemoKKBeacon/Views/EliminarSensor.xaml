@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DemoKKBeacon.EliminarSensor"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <!---->
+                    <RowDefinition Height="Auto"/>
+                    <!--1-->
+                    <RowDefinition Height="Auto"/>
+                    <!--2-->
+                    <RowDefinition Height="Auto"/>
+                    <!--3-->
+                    <RowDefinition Height="Auto"/>
+                    <!--4-->
+                    <RowDefinition Height="Auto"/>
+                    <!--5-->
+                    <RowDefinition Height="Auto"/>
+                    <!--6-->
+                    <RowDefinition Height="Auto"/>
+                    <!--8-->
+                    <RowDefinition Height="Auto"/>
+                    <!--9-->
+                    <RowDefinition Height="Auto"/>
+                    <!--10-->
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
+                    <Label
+                         Text="Datos KKBeacon"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         HorizontalTextAlignment="Center"
+                         FontSize="26"
+                         Margin="0,0,0,5"
+                         WidthRequest="300"
+                         TextColor="{OnPlatform Android=Black}"
+                         />
+                </StackLayout>
+
+
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
+                    <Label
+                
+                    Text="Seleccione el Sensor a Eliminar: "
+                    TextColor="Black"
+                    FontSize="15"
+                    WidthRequest="300"
+                        />
+                    <Frame
+           
+                        HasShadow="{OnPlatform Android=true,iOS=false}"
+                        Padding="{OnPlatform Android=8,iOS=0}"
+                         CornerRadius="{OnPlatform Android=7}">
+                        <Picker x:Name="pickerKKBeacon" Title="Selecccionar Sensor" ItemsSource="{Binding KKBeacon}" SelectedItem="{Binding SelectedKKBeacon, Mode=TwoWay}" />
+                    </Frame>
+                </StackLayout>
+
+
+
+
+
+
+
+
+                <StackLayout Grid.Row="8" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
+                     Text="Eliminar"
+                            TextColor="Black"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="{OnPlatform Android=15}"
+                            BackgroundColor="#fcfcfc"
+                            BorderColor="#f2f2f2"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                         Clicked="EliminarKKBeacon_Clicked"
+        
+                    />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

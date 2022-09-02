@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DemoKKBeacon.ListaRegistroSensores"
+    BackgroundColor="White"
+    x:Name="ContentPage1">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <!---->
+                    <RowDefinition Height="Auto"/>
+                    <!--1-->
+                    <RowDefinition Height="Auto"/>
+                    <!--2-->
+                    <RowDefinition Height="Auto"/>
+                    <!--3-->
+                    <RowDefinition Height="Auto"/>
+                    <!--4-->
+                    <RowDefinition Height="Auto"/>
+                    <!--5-->
+                    <RowDefinition Height="Auto"/>
+                    <!--6-->
+                    <RowDefinition Height="Auto"/>
+                    <!--8-->
+                    <RowDefinition Height="Auto"/>
+                    <!--9-->
+                    <RowDefinition Height="Auto"/>
+                    <!--10-->
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
+                    <Label
+                         Text="Datos Sensores"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         HorizontalTextAlignment="Center"
+                         FontSize="26"
+                         Margin="0,0,0,5"
+                         WidthRequest="300"
+                         TextColor="{OnPlatform Android=Black}"
+                         />
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
+                  
+                    <Frame
+                HasShadow="{OnPlatform Android=true,iOS=false}"
+                Padding="{OnPlatform Android=8,iOS=0}"
+                CornerRadius="{OnPlatform Android=7}"
+                >
+                        <Editor x:Name="editor" Text="Vacio" BackgroundColor="OrangeRed" HeightRequest="300" />
+                    </Frame>
+                </StackLayout>
+
+
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
+                    <Label Text="Reporte"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="CenterAndExpand"/>
+
+
+                    <ListView  x:Name="listViewRegistroPalletSensor"  SeparatorColor="Gray" SeparatorVisibility="Default" ItemsSource="{Binding Source={x:Reference ContentPage1}, Path=BindingContext.MyList}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Padding="0,0,0,1">
+                                        
+                                        <Grid VerticalOptions="Fill" BackgroundColor="White">
+                                            
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="10"/>
+                                                <ColumnDefinition Width="2*"/>
+                                                <ColumnDefinition Width="4*"/>
+                                                <ColumnDefinition Width="1.5*"/>
+                                                <ColumnDefinition Width="60"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            
+                                            <Label Grid.Column="0" Grid.Row="0" Text="{Binding Id}"/>
+
+                                            <Label Grid.Column="1" Grid.Row="0" Text="Lote:"/>
+                                            <Label Grid.Column="1" Grid.Row="1" Text="Pallet:"/>
+
+                                            <Label Grid.Column="2" Grid.Row="0" Text="{Binding NumLote}"/>
+                                            
+                                            <Image Grid.Column="4" Grid.Row="0" Source="sensor.png" />
+
+                                            
+                                            <Label Grid.Column="3" Grid.Row="1" Text="Mac:"/>
+
+                                            <Label Grid.Column="2" Grid.Row="1" Text="{Binding CodPallet}"/>
+                                            <Label Grid.Column="4" Grid.Row="1" Text="{Binding Dmac}"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </ViewCell>
+                                
+                                
+                            </DataTemplate>
+                            
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+
+
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

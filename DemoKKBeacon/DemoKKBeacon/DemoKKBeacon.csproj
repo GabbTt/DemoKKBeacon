@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v12.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\EliminarSensor.xaml.cs">
+      <DependentUpon>EliminarSensor.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LocalizarPalletsActivos.xaml.cs">
+      <DependentUpon>LocalizarPalletsActivos.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SensoresVisibles.xaml.cs">
+      <DependentUpon>SensoresVisibles.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MenuGestionKKBeacon.xaml.cs">
+      <DependentUpon>MenuGestionKKBeacon.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MenuGestionReportes.xaml.cs">
+      <DependentUpon>MenuGestionReportes.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\RegistroPalletsSensores.xaml.cs">
+      <DependentUpon>RegistroPalletsSensores.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\RegistroKKBeacon.xaml.cs">
+      <DependentUpon>RegistroKKBeacon.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MenuAdmin.xaml.cs">
+      <DependentUpon>MenuAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\IngresarCodigo.xaml.cs">
+      <DependentUpon>IngresarCodigo.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListaRegistroSensores.xaml.cs">
+      <DependentUpon>ListaRegistroSensores.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SolicitarCodigo.xaml.cs">
+      <DependentUpon>SolicitarCodigo.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\EliminarKKBeacon.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\EmbeddedImagesSample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuGestionKKBeacon.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuGestionReportes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuGestionSensores.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RegistroPalletsSensores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RegistroKKBeacon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\IngresarCodigo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RegistroSensores.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SolicitarCodigo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

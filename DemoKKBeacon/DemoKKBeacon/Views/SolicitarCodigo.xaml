@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:EmbeddedImagesSample"
+    x:Class="DemoKKBeacon.SolicitarCodigo"
+    BackgroundColor="White">
+   
+    
+    
+    <ContentPage.Content>
+       
+        
+         <ScrollView>
+
+        <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/> <!---->
+                    <RowDefinition Height="10"/>  <!--1-->
+                    <RowDefinition Height="80"/>  <!--2-->
+                    <RowDefinition Height="Auto"/>  <!--3-->
+                    <RowDefinition Height="Auto"/>  <!--4-->
+                    <RowDefinition Height="Auto"/>  <!--5-->
+                    <RowDefinition Height="Auto"/>  <!--6-->
+                    <RowDefinition Height="Auto"/>  <!--7-->
+
+                   
+
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout  Grid.Row="0" Padding="20,50,20,0" VerticalOptions="Center">
+                    <Image Source="imagen.jpg" />
+                </StackLayout>
+            
+            
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
+                 <Label
+                         Text="Bienvenido "
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         HorizontalTextAlignment="Center"
+                         FontSize="26"
+                         Margin="0,0,0,5"
+                         WidthRequest="300"
+                         TextColor="{OnPlatform Android=Black}"
+                         />
+                 <Label
+                    Text="Iniciar sesión para continuar"
+                            TextColor="Black"
+                            FontSize="15"
+                            WidthRequest="300"
+                            HorizontalTextAlignment="Center"
+                    />
+            </StackLayout>
+
+
+
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
+                <Label
+                    Text="Número de Cédula"
+                    FontSize="{OnPlatform Android=13}"
+                    TextColor="Black"
+                    />
+                <Frame
+                    HasShadow="{OnPlatform Android=true,iOS=false}"
+                    Padding="{OnPlatform Android=8,iOS=0}"
+                    CornerRadius="{OnPlatform Android=7}"
+                    >
+                <Entry
+                    x:Name="CedulaTxt"
+                    Placeholder="1722343501"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    Text="{Binding Cedula, Mode=TwoWay}"
+                    FontSize="{OnPlatform Android=15,iOS=16}"
+                    />
+                     </Frame>   
+            </StackLayout>
+
+             <StackLayout Grid.Row="4" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" >
+                  
+                 <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="0">
+                 <Label
+                    Text="Número de Celular"
+                    FontSize="{OnPlatform Android=13}"
+                    TextColor="Black"
+                     VerticalOptions="Center"
+                     WidthRequest="150"
+                    />
+                 
+                 </StackLayout> 
+                 <Frame
+                     HasShadow="{OnPlatform Android=true,iOS=false}"
+                     Padding="{OnPlatform Android=8,iOS=0}"
+                     CornerRadius="{OnPlatform Android=7}"
+                     >
+
+                   <Entry
+                    x:Name="CelularTxt"
+                    Placeholder="0998877665"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    FontSize="{OnPlatform Android=15,iOS=16}"
+                    Text="{Binding Celular, Mode=TwoWay}"
+                   
+                    
+                    />
+                    
+                 </Frame>
+
+            </StackLayout>
+
+
+             <StackLayout Grid.Row="5" HorizontalOptions="Center" Padding="0">
+                   <ActivityIndicator
+                      
+                      
+                       Color="Black"
+                       Scale="0.8"
+                     
+                       />
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Vertical" >
+                      <Button
+                     Text="Solicitar Código"
+                            TextColor="Black"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="{OnPlatform Android=15}"
+                            BackgroundColor="#fcfcfc"
+                            BorderColor="#f2f2f2"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            ImageSource="trigo.jpg"
+                          Clicked="Solicitar_Clicked"
+                    />
+                
+              
+            </StackLayout>
+
+
+               
+
+                <StackLayout Grid.Row="7"  Padding="20,50,20,0" VerticalOptions="Center">
+                    <Image Source="logocom.png" />
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

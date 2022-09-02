@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DemoKKBeacon.MenuGestionSensores"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <!---->
+                    <RowDefinition Height="Auto"/>
+                    <!--1-->
+                    <RowDefinition Height="100"/>
+                    <!--2-->
+                    <RowDefinition Height="Auto"/>
+                    <!---->
+                    <RowDefinition Height="Auto"/>
+                    <!--3-->
+                    <RowDefinition Height="Auto"/>
+                    <!--4-->
+                    <RowDefinition Height="Auto"/>
+                    <!--5-->
+                    <RowDefinition Height="Auto"/>
+                    <!--6-->
+                    <RowDefinition Height="Auto"/>
+                    <!--8-->
+
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal"  Margin="0,0,0,10">
+                    <Label
+                         Text="MENÚ GESTIÓN SENSORES"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         HorizontalTextAlignment="Center"
+                         FontSize="26"
+                         Margin="0,0,0,5"
+                         WidthRequest="300"
+                         TextColor="{OnPlatform Android=Black}"
+                         />
+
+                </StackLayout>
+
+
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
+                     Text="Agregar Sensor"
+                            TextColor="Black"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="{OnPlatform Android=15}"
+                            BackgroundColor="#fcfcfc"
+                            BorderColor="#f2f2f2"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                          Clicked="MenuAgregarSensores_Clicked"
+                    />
+
+
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="4" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
+                     Text="Eliminar Sensor"
+                            TextColor="Black"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="{OnPlatform Android=15}"
+                            BackgroundColor="#fcfcfc"
+                            BorderColor="#f2f2f2"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                          Clicked="MenuEliminarSensores_Clicked"
+                    />
+
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
+                     Text="Registrar Pallet con Sensor"
+                            TextColor="Black"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="{OnPlatform Android=15}"
+                            BackgroundColor="#fcfcfc"
+                            BorderColor="#f2f2f2"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                          Clicked="RegistrarPalletSensor_Clicked"
+                    />
+
+
+                </StackLayout>
+
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

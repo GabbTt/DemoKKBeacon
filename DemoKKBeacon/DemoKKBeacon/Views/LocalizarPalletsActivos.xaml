@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DemoKKBeacon.LocalizarPalletsActivos"
+    BackgroundColor="White"
+    x:Name="ContentPage1">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <!---->
+                    <RowDefinition Height="Auto"/>
+                    <!--1-->
+                    <RowDefinition Height="Auto"/>
+                    <!--2-->
+                   
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
+                    <Label
+                         Text="Localizar Pallets Activos"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         HorizontalTextAlignment="Center"
+                         FontSize="26"
+                         Margin="0,0,0,5"
+                         WidthRequest="300"
+                         TextColor="{OnPlatform Android=Black}"
+                         />
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
+                     Text="Actualizar"
+                            TextColor="Black"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="{OnPlatform Android=15}"
+                            BackgroundColor="#fcfcfc"
+                            BorderColor="#f2f2f2"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                         Clicked="Actualizar_Clicked"
+        
+                    />
+                </StackLayout>
+
+
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
+                   
+
+
+                    <ListView  x:Name="listViewRegistroPalletSensor"  SeparatorColor="Gray" SeparatorVisibility="Default" ItemsSource="{Binding Source={x:Reference ContentPage1}, Path=BindingContext.MyList}"  HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Padding="0,0,0,1">
+
+                                        <Grid VerticalOptions="Center" BackgroundColor="White">
+                                            
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2*"/>
+                                                <ColumnDefinition Width="3*"/>
+                                                <ColumnDefinition Width="2*"/>
+                                                <ColumnDefinition Width="3*"/>
+                                             
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+
+
+                                            <Label Grid.Column="0" Grid.Row="0" Text="Centro:" Font="10"/>
+                                            <Label Grid.Column="0" Grid.Row="1" Text="Bodega:" Font="10"/>
+                                            <Label Grid.Column="0" Grid.Row="2" Text="Distancia:" Font="10"/>
+
+                                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding Centro}" Font="12"/>
+                                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Bodega}" Font="12"/>
+                                            <Label Grid.Column="1" Grid.Row="2"  Text="{Binding Rssi,StringFormat='{0} dm'}"/>
+
+
+                                            <Label Grid.Column="2" Grid.Row="0" Text="Pallet:" Font="10"/>
+                                            <Label Grid.Column="2" Grid.Row="1" Text="Lote:" Font="10"/>
+                                            <Label Grid.Column="2" Grid.Row="2" Text="Dmac:" Font="10"/>
+
+                                            <Label Grid.Column="3" Grid.Row="0" Text="{Binding CodPallet}" Font="12"/>
+                                            <Label Grid.Column="3" Grid.Row="1" Text="{Binding NumLote}" Font="12"></Label>
+                                            <Label Grid.Column="3" Grid.Row="2" Text="{Binding Dmac}" Font="12"></Label>
+
+                                           
+                                           
+
+                                        </Grid>
+
+                                        
+
+                                        <Label  Text="{Binding SensorTime}"/>
+                                    </StackLayout>
+                                   
+                                </ViewCell>
+                                
+                                
+                            </DataTemplate>
+                            
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                   
+
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
