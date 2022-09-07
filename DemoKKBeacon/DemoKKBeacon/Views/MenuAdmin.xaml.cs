@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoKKBeacon.Views;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
@@ -42,9 +43,9 @@ namespace DemoKKBeacon
 
         }
 
-        private async void MenuGraficas_Clicked(object sender, EventArgs e)
+        private async void GaficoBodegas_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MenuAdmin());
+            await Navigation.PushAsync(new GraficoBodegas());
             //System.Diagnostics.Debug.WriteLine(CodigoTxt.Text);
 
 

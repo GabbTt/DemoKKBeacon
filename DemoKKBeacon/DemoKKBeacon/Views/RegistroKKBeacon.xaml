@@ -8,7 +8,7 @@
         <ScrollView>
             <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="80"/>
                     <!---->
                     <RowDefinition Height="Auto"/>
                     <!--1-->
@@ -184,6 +184,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                           Clicked="IngresarKKBeacon_Clicked"
                     />
                 </StackLayout>

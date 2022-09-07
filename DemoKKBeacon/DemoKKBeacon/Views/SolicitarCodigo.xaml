@@ -130,8 +130,8 @@
             </StackLayout>
 
 
-            <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Vertical" >
-                      <Button
+                <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
                      Text="Solicitar Código"
                             TextColor="Black"
                             Font="Montserrat-Medium.otf"
@@ -144,17 +144,8 @@
                             ImageSource="trigo.jpg"
                           Clicked="Solicitar_Clicked"
                     />
-                
-              
-            </StackLayout>
 
-
-               
-
-                <StackLayout Grid.Row="7"  Padding="20,50,20,0" VerticalOptions="Center">
-                    <Image Source="logocom.png" />
                 </StackLayout>
-
 
             </Grid>
         </ScrollView>

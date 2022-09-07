@@ -28,7 +28,7 @@ namespace DemoKKBeacon
             var newRegistroSensor = new RegistroSensor(MacTxtSensor.Text, true);
 
 
-            var client = new RestClient("http://192.168.100.240:88");
+            var client = new RestClient("http://192.168.174.181:88");
             var request = new RestRequest("/api/RegistroSensores", Method.Post);
 
             request.AddJsonBody(newRegistroSensor);

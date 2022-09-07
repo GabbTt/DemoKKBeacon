@@ -43,6 +43,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                          Clicked="Actualizar_Clicked"
         
                     />

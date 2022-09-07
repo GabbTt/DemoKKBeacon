@@ -35,6 +35,10 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
+                <StackLayout Grid.Row="1"  Padding="20,50,20,0" VerticalOptions="Center">
+                    <Image Source="logocom.png" />
+                </StackLayout>
+
                 <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal"  Margin="0,0,0,10">
                     <Label
                          Text="MENÚ GESTIÓN SENSORES"
@@ -62,6 +66,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                           ImageSource="trigo.jpg"
                           Clicked="MenuAgregarSensores_Clicked"
                     />
 
@@ -80,6 +85,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                           Clicked="MenuEliminarSensores_Clicked"
                     />
 
@@ -97,6 +103,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                           Clicked="RegistrarPalletSensor_Clicked"
                     />
 

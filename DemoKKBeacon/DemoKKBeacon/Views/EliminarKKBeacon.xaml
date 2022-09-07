@@ -62,13 +62,6 @@
                     </Frame>
                 </StackLayout>
 
-
-
-
-
-
-
-
                 <StackLayout Grid.Row="8" HorizontalOptions="Center" Orientation="Vertical" >
                     <Button
                      Text="Eliminar"
@@ -80,6 +73,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                          Clicked="EliminarKKBeacon_Clicked"
         
                     />

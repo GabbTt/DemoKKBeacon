@@ -9,10 +9,10 @@
 
         <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90"/> <!---->
-                    <RowDefinition Height="Auto"/>  <!--1-->
+                    <RowDefinition Height="10"/> <!---->
+                    <RowDefinition Height="160"/>  <!--1-->
                     <RowDefinition Height="100"/>  <!--2-->
-                    <RowDefinition Height="auto"/>    <!---->
+                    <RowDefinition Height="Auto"/>    <!--400-->
                     <RowDefinition Height="Auto"/>  <!--3-->
                     <RowDefinition Height="Auto"/>  <!--4-->
                     <RowDefinition Height="Auto"/>  <!--5-->
@@ -26,7 +26,12 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-            <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal"  Margin="0,0,0,10">
+
+                <StackLayout Grid.Row="1"  Padding="20,50,20,0" VerticalOptions="Center">
+                    <Image Source="logocom.png" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal"  Margin="0,0,0,10">
                  <Label
                          Text="MENÚ DE ADMINISTRADOR"
                          FontAttributes="Bold"
@@ -53,6 +58,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                           Clicked="MenuGestionKKBeacon_Clicked"
                     />
                 
@@ -71,6 +77,8 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
+                            
                           Clicked="MenuGestionSensores_Clicked"
                     />
 
@@ -88,6 +96,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                           Clicked="MenuGestionReportes_Clicked"
                     />
 
@@ -105,11 +114,15 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
-                          Clicked="MenuGraficas_Clicked"
+                            ImageSource="trigo.jpg"
+                           Clicked="GaficoBodegas_Clicked"
                     />
 
 
                 </StackLayout>
+
+
+            
 
             </Grid>
         </ScrollView>

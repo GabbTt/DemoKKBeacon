@@ -9,14 +9,14 @@
 
         <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90"/> <!---->
-                    <RowDefinition Height="Auto"/>  <!--1-->
+                    <RowDefinition Height="70"/> <!---->
+                    <RowDefinition Height="120"/>  <!--1-->
                     <RowDefinition Height="Auto"/>  <!--2-->
                     <RowDefinition Height="Auto"/>  <!--3-->
                     <RowDefinition Height="Auto"/>  <!--4-->
                     <RowDefinition Height="Auto"/>  <!--5-->
                     <RowDefinition Height="Auto"/>  <!--6-->
-                    <RowDefinition Height="Auto"/>  <!--8-->
+                    <RowDefinition Height="Auto"/>  <!--7-->
 
 
             </Grid.RowDefinitions>
@@ -24,20 +24,17 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <!--
-                <StackLayout Grid.Row="1">
-                    <Image
-                    Source="ICONO.png"
-                    HeightRequest="{OnPlatform iOS=90,Android=70}"
-                    WidthRequest="{OnPlatform iOS=90,Android=0}"
-                    />
-                </StackLayout> -->
 
+                <StackLayout Grid.Row="1"  Padding="20,50,20,0" VerticalOptions="Center">
+                    <Image Source="logocom.png" />
+                </StackLayout>
+            
                 <StackLayout Grid.Row="2" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
                  <Label
                          Text="Bienvenido de Vuelta"
                          FontAttributes="Bold"
-                         HorizontalOptions="Center"
+                          HorizontalOptions="Center"
+                         HorizontalTextAlignment="Center"
                          FontSize="26"
                          Margin="0,0,0,5"
                          WidthRequest="300"
@@ -86,9 +83,9 @@
             </StackLayout>
 
 
-            <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Vertical" >
-                      <Button
-                     Text="Ingresar"
+                <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
+                     Text="Ingresar Código"
                             TextColor="Black"
                             Font="Montserrat-Medium.otf"
                             FontSize="{OnPlatform Android=15}"
@@ -97,11 +94,14 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                           Clicked="Ingresar_Clicked"
                     />
-                
-              
-            </StackLayout>
+
+                </StackLayout>
+
+          
+            
 
             </Grid>
         </ScrollView>

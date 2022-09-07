@@ -9,9 +9,9 @@
 
             <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="50"/>
                     <!---->
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="150"/>
                     <!--1-->
                     <RowDefinition Height="100"/>
                     <!--2-->
@@ -34,6 +34,11 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+
+
+                <StackLayout Grid.Row="1"  Padding="20,50,20,0" VerticalOptions="Center">
+                    <Image Source="logocom.png" />
+                </StackLayout>
 
                 <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal"  Margin="0,0,0,10">
                     <Label
@@ -62,6 +67,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                           ImageSource="trigo.jpg"
                           Clicked="MenuAgregarKKBeacons_Clicked"
                     />
 
@@ -80,6 +86,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                           Clicked="MenuEliminarKKBeacons_Clicked"
                     />
 
@@ -97,6 +104,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
+                            ImageSource="trigo.jpg"
                           Clicked="MenuEditarBeacons_Clicked"
                     />
 

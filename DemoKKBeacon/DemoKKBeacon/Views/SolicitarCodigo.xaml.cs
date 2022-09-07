@@ -33,7 +33,7 @@ namespace DemoKKBeacon
               //  {
                 //    Text = "ImageButton",
                 //    FontSize = 50,
-                 //   FontAttributes = FontAttributes.Bold,
+                 //   FontAttributes = FontAttributes.
                  //   HorizontalOptions = LayoutOptions.Center
                // };
 

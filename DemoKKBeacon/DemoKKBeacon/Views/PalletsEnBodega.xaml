@@ -2,25 +2,32 @@
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="DemoKKBeacon.SensoresVisibles"
+    x:Class="DemoKKBeacon.PalletsEnBodega"
     BackgroundColor="White"
     x:Name="ContentPage1">
     <ContentPage.Content>
         <ScrollView>
             <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="90"/>
                     <!---->
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="100"/>
                     <!--1-->
                     <RowDefinition Height="Auto"/>
                     <!--2-->
+                    <RowDefinition Height="Auto"/>
+                    <!--3-->
+                    
                    
                 </Grid.RowDefinitions>
 
+                <StackLayout Grid.Row="0"  Padding="20,50,20,0" VerticalOptions="Center">
+                    <Image Source="logocom.png" />
+                </StackLayout>
+
                 <StackLayout Grid.Row="1" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
                     <Label
-                         Text="Reporte General De Sensores Visibles"
+                         Text="Reporte de Pallets por Bodegas"
                          FontAttributes="Bold"
                          HorizontalOptions="Center"
                          HorizontalTextAlignment="Center"
@@ -43,7 +50,7 @@
                             BorderWidth="1.5"
                             WidthRequest="300"
                             HeightRequest="50"
-                             ImageSource="trigo.jpg"
+                            ImageSource="trigo.jpg"
                          Clicked="Actualizar_Clicked"
         
                     />
@@ -52,52 +59,50 @@
 
 
                 <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
-                   
+
+                    <Grid VerticalOptions="Center" BackgroundColor="White">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
 
 
-                    <ListView  x:Name="listViewRegistroPalletSensor"  SeparatorColor="Gray" SeparatorVisibility="Default" ItemsSource="{Binding Source={x:Reference ContentPage1}, Path=BindingContext.MyList}"  HasUnevenRows="True">
+                        <Label Grid.Column="0" Grid.Row="0" Text="CENTRO" Font="10"/>
+                        <Label Grid.Column="1" Grid.Row="0" Text="BODEGA" Font="10"/>
+                        <Label Grid.Column="2" Grid.Row="0" Text="#PALLETS" Font="10"/>
+
+                    </Grid>
+
+                    <ListView  x:Name="listViewRegistroPalletSensor"  SeparatorColor="Black" SeparatorVisibility="Default" ItemsSource="{Binding Source={x:Reference ContentPage1}, Path=BindingContext.MyList}"  HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <StackLayout Padding="0,0,0,1">
 
-                                        <Grid VerticalOptions="Fill" BackgroundColor="White">
+                                        <Grid VerticalOptions="Center" BackgroundColor="White">
                                             
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="0.6*"/>
-                                                <ColumnDefinition Width="0.6*"/>
-                                                <ColumnDefinition Width="1.5*"/>
-                                                <ColumnDefinition Width="0.8*"/>
+                                                <ColumnDefinition Width="5*"/>
+                                                <ColumnDefinition Width="3*"/>
+                                                <ColumnDefinition Width="2*"/>
+                                             
                                                 <ColumnDefinition />
                                             </Grid.ColumnDefinitions>
 
 
-                                            <Label Grid.Column="0" Grid.Row="0" Text="{Binding Id}"  Font="10"/>
 
-                                            <Label Grid.Column="1" Grid.Row="0" Text="GMac:" Font="12"/>
-                                            <Label Grid.Column="1" Grid.Row="1" Text="DMac:" Font="12"/>
-
-                                            <Label Grid.Column="2" Grid.Row="0" Text="{Binding Gmac}" Font="12"/>
-                                            <Label Grid.Column="2" Grid.Row="1" Text="{Binding Dmac}" Font="12"/>
+                                            <Label Grid.Column="0" Grid.Row="0" Text="{Binding Centro}" Font="12"/>
+                                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding Bodega}" Font="12"/>
+                                            <Label Grid.Column="2" Grid.Row="0"  Text="{Binding Pallets}" Font="12"/>
 
 
-
-                                            <Label Grid.Column="3" Grid.Row="0" Text="Rssi:" Font="12"/>
-                                            <Label Grid.Column="3" Grid.Row="1" Text="Temp:" Font="12"/>
-
-                                            <Label Grid.Column="4" Grid.Row="0" Text="{Binding Rssi}" Font="12"/>
-                                            <Label Grid.Column="4" Grid.Row="1" Text="{Binding Temp, StringFormat='{0}° C'}" Font="12"/>
-
-
-                                            <Label Grid.Column="3" Grid.Row="2" Text="Hum %:" Font="12" />
-                                            <Label Grid.Column="4" Grid.Row="2" Text="{Binding Humidty}" Font="12"/>
 
                                         </Grid>
-
-                                       
-                                        <Label  Text="{Binding SensorTime}"/>
-                                        <Label  Text=""/>
-
+                                      
                                     </StackLayout>
                                    
                                 </ViewCell>

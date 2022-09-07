@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
@@ -13,8 +14,8 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="RestSharp" Version="108.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,9 @@
   <ItemGroup>
     <Compile Update="Views\EliminarSensor.xaml.cs">
       <DependentUpon>EliminarSensor.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PalletsEnBodega.xaml.cs">
+      <DependentUpon>PalletsEnBodega.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\LocalizarPalletsActivos.xaml.cs">
       <DependentUpon>LocalizarPalletsActivos.xaml</DependentUpon>
@@ -64,6 +68,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\EmbeddedImagesSample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\GaficoBodegas.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MenuGestionKKBeacon.xaml">

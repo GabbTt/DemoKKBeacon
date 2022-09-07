@@ -21,6 +21,8 @@ namespace DemoKKBeacon
                 await Navigation.PushAsync(new SensoresVisibles());
            else if (RadioPallets.IsChecked)
                 await Navigation.PushAsync(new LocalizarPalletsActivos());
+            else if (RadioPalletsBodega.IsChecked)
+                await Navigation.PushAsync(new PalletsEnBodega());
 
 
         }

@@ -51,7 +51,7 @@ namespace DemoKKBeacon
         public List<RegistroPalletSensor> GetPalletSensors()
         {
 
-            var client = new RestClient("http://192.168.100.240:88");
+            var client = new RestClient("http://192.168.174.181:88");
             var request = new RestRequest("/api/ListaSensores/1/1", Method.Get);
 
             var something = client.Execute(request);
