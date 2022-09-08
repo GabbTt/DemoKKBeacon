@@ -28,6 +28,12 @@
     <Compile Update="Views\EliminarSensor.xaml.cs">
       <DependentUpon>EliminarSensor.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\GraficoBodegas.xaml.cs">
+      <DependentUpon>GraficoBodegas.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LocalizarPalletsCentro.xaml.cs">
+      <DependentUpon>LocalizarPalletsCentro.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\PalletsEnBodega.xaml.cs">
       <DependentUpon>PalletsEnBodega.xaml</DependentUpon>
     </Compile>
@@ -70,7 +76,7 @@
     <EmbeddedResource Update="Views\EmbeddedImagesSample.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\GaficoBodegas.xaml">
+    <EmbeddedResource Update="Views\GraficoBodegas.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MenuGestionKKBeacon.xaml">

@@ -11,7 +11,7 @@ namespace DemoKKBeacon
     public partial class RegistroKKBeacon : ContentPage
     {
 
-        List<String> Localidades = new List<string>() { "QUITO", "GUAYAQUIL", "CAYAMBE" };
+        List<String> Localidades = new List<string>() { "QUITO", "GUAYAQUIL", "CAYAMBE" , "CAJABAMBA" };
         List<String> Bodegas = new List<string>() { "B1", "B2", "B3", "B4"};
 
         public RegistroKKBeacon()
@@ -27,10 +27,10 @@ namespace DemoKKBeacon
 
 
 
-            var newIngresoKKBeacon = new RegistroGateway(MacTxt.Text, pickerLocalidad.SelectedItem.ToString(), pickerBodega.SelectedItem.ToString(), Int32.Parse(XTxt.Text), Int32.Parse(YTxt.Text), Int32.Parse(ZTxt.Text), true);
+            var newIngresoKKBeacon = new RegistroGateway(MacTxt.Text, pickerLocalidad.SelectedItem.ToString(), pickerBodega.SelectedItem.ToString(), 0,0,0, true);
 
 
-            var client = new RestClient("http://192.168.174.181:88");
+            var client = new RestClient("http://192.168.1.40:88");
             var request = new RestRequest("/api/RegistroGateways", Method.Post);
 
             request.AddJsonBody(newIngresoKKBeacon);

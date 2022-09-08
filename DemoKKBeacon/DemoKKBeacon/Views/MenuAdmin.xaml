@@ -105,7 +105,7 @@
 
                 <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Vertical" >
                     <Button
-                     Text="Gráficas"
+                     Text="Gráfico Bodegas"
                             TextColor="Black"
                             Font="Montserrat-Medium.otf"
                             FontSize="{OnPlatform Android=15}"
@@ -121,8 +121,26 @@
 
                 </StackLayout>
 
+                <StackLayout Grid.Row="7" HorizontalOptions="Center" Orientation="Vertical" >
+                    <Button
+                     Text="Gráfico Sensores"
+                            TextColor="Black"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="{OnPlatform Android=15}"
+                            BackgroundColor="#fcfcfc"
+                            BorderColor="#f2f2f2"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            ImageSource="trigo.jpg"
+                           Clicked="GaficoSensores_Clicked"
+                    />
 
-            
+
+                </StackLayout>
+
+
+
 
             </Grid>
         </ScrollView>

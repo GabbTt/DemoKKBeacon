@@ -23,7 +23,7 @@ namespace DemoKKBeacon
         public List<String> GetSensors()
         {
 
-            var client = new RestClient("http://192.168.174.181:88");
+            var client = new RestClient("http://192.168.1.40:88");
             var request = new RestRequest("/api/ListaSensoresDisponibles", Method.Get);
 
             var something = client.Execute(request);
@@ -43,7 +43,7 @@ namespace DemoKKBeacon
             
             var newRegistroPalletSensor = new RegistroPalletSensor(LoteTxt.Text, PalletTxt.Text, pickerSensor.SelectedItem.ToString());
 
-            var client = new RestClient("http://192.168.174.181:88");
+            var client = new RestClient("http://192.168.1.40:88");
             var request = new RestRequest("/api/RegistroPalletSensor", Method.Post);
 
             request.AddJsonBody(newRegistroPalletSensor);

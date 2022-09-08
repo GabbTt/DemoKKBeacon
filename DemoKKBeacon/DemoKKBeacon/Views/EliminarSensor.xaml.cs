@@ -25,7 +25,7 @@ namespace DemoKKBeacon
         public List<String> GetSensors()
         {
 
-            var client = new RestClient("http://192.168.174.181:88");
+            var client = new RestClient("http://192.168.1.40:88");
             var request = new RestRequest("/api/ListaSensores", Method.Get);
 
             var something = client.Execute(request);
@@ -52,7 +52,7 @@ namespace DemoKKBeacon
         private async void EliminarKKBeacon_Clicked(object sender, EventArgs e)
         {
 
-            var client = new RestClient("http://192.168.174.181:88");
+            var client = new RestClient("http://192.168.1.40:88");
             var request = new RestRequest($"/api/sensores/{pickerKKBeacon.SelectedItem}", Method.Delete);
 
 

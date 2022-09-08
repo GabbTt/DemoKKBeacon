@@ -49,6 +49,13 @@ namespace DemoKKBeacon
             //System.Diagnostics.Debug.WriteLine(CodigoTxt.Text);
 
 
+        }       
+        private async void GaficoSensores_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LocalizarPalletsCentro());
+            //System.Diagnostics.Debug.WriteLine(CodigoTxt.Text);
+
+
         }
 
     }

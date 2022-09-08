@@ -26,7 +26,7 @@ namespace DemoKKBeacon
         public List<SensorAndGatewayData> GetSensoresVisibles()
         {
 
-            var client = new RestClient("http://192.168.174.181:88");
+            var client = new RestClient("http://192.168.1.40:88");
             var request = new RestRequest("/api/ListaSensoresVisibles", Method.Get);
 
             //var something = client.Execute(request);

@@ -3,31 +3,30 @@ using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using DemoKKBeacon.Models;
+using DemoKKBeacon.Views ;
 using Newtonsoft.Json;
 using System.Xml.Linq;
 using System.Linq;
 
 namespace DemoKKBeacon
 {
-    public partial class LocalizarPalletsActivos : ContentPage
+    public partial class LocalizarPalletsCentro : ContentPage
     {
 
 
+        List<String> localidades;
 
-
-        public LocalizarPalletsActivos()
+        public LocalizarPalletsCentro()
         {
             InitializeComponent();
 
             this.BindingContext = this;
 
+            localidades = GetLocalizarPalletsActivos().Select(e => e.Centro).Distinct().ToList();
 
+            //listViewRegistroPalletSensor.ItemsSource = GetLocalizarPalletsActivos();
 
-         
-
-
-            listViewRegistroPalletSensor.ItemsSource = GetLocalizarPalletsActivos();
-
+            pickerLocalidad.ItemsSource = localidades;
 
         }
 
@@ -47,8 +46,8 @@ namespace DemoKKBeacon
 
         private void Actualizar_Clicked(object sender, EventArgs e)
         {
-
-            listViewRegistroPalletSensor.ItemsSource = GetLocalizarPalletsActivos();
+            var localidad = pickerLocalidad.SelectedItem.ToString();
+            listViewRegistroPalletSensor.ItemsSource = GetLocalizarPalletsActivos().Where(registro => registro.Centro.ToUpper() == localidad);
 
         }
 

@@ -34,7 +34,7 @@ namespace DemoKKBeacon
         public  List<PalletsEnBodegaModel> GetLocalizarPalletsActivos()
         {
 
-            var client = new RestClient("http://192.168.174.181:88");
+            var client = new RestClient("http://192.168.1.40:88");
             var request = new RestRequest("/api/PalletsEnBodega", Method.Get);
 
             var queryResult = client.Execute<List<PalletsEnBodegaModel>>(request).Data;

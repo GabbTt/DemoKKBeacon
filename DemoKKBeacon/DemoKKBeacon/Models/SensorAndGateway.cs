@@ -19,5 +19,7 @@ namespace DemoKKBeacon.Models
         public string Z0 { get; set; }
 
 
+     
+
     }
 }

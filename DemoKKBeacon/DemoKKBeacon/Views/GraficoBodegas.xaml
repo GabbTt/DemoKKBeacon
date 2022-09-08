@@ -16,7 +16,9 @@
                     <RowDefinition Height="100"/>
                     <!--2-->
                     <RowDefinition Height="182"/>
+                    
                     <!--3-->
+                    <RowDefinition Height="150"/>
 
 
                 </Grid.RowDefinitions>
@@ -60,7 +62,7 @@
 
                 <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
 
-                    <Grid VerticalOptions="Center" BackgroundColor="black">
+                    <Grid VerticalOptions="Center" BackgroundColor="White">
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
@@ -72,11 +74,11 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <BoxView Color="Gold"  Grid.Column="0" Grid.Row="0"  x:Name="bbgye1" />
-                        <Label  Text="GYE B1"  x:Name="gye1"  Grid.Column="0"  Grid.Row="0"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="14" />
+                        <BoxView Color="Gold"  Grid.Column="0" Grid.Row="0"  x:Name="bbcay1" />
+                        <Label  Text="CAY B1"  x:Name="cay1"  Grid.Column="0"  Grid.Row="0"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="14" />
 
                         <BoxView Color="Gold" Grid.Column="1"  Grid.Row="0"  />
-                        <Label Text="CAY B1"   Grid.Column="1"   Grid.Row="0"  HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"/>
+                        <Label Text="GYE B1"   Grid.Column="1"   Grid.Row="0"  HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"/>
 
                         <BoxView Color="Gold"  Grid.Column="2"  Grid.Row="0"  x:Name="bbgye2"  />
                         <Label Text="GYE B2"   x:Name="gye2"  Grid.Column="2"   Grid.Row="0" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"/>
@@ -91,14 +93,14 @@
                         <BoxView Color="Gold"  Grid.Column="2"  Grid.Row="1" />
                         <Label Text="CAJ B3"   Grid.Column="2"   Grid.Row="1" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"/>
 
-                        <BoxView Color="Gold"  Grid.Column="0" Grid.Row="2"  x:Name="bbuio1" />
-                        <Label Text="UIO B1"   x:Name="uio1"  Grid.Column="0"  Grid.Row="2"  HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"/>
+                        <BoxView Color="Gold"  Grid.Column="0" Grid.Row="2"  x:Name="bbcaj4" />
+                        <Label Text="CAJ B4"   x:Name="caj4"  Grid.Column="0"  Grid.Row="2"  HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"/>
 
                         <BoxView Color="Gold" Grid.Column="1"  Grid.Row="2"  />
                         <Label Text="MAN B1"   Grid.Column="1"   Grid.Row="2"  HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"/>
 
-                        <BoxView Color="Gold"  Grid.Column="2"  Grid.Row="2"  x:Name="bbuio2"/>
-                        <Label Text="UIO B2"  x:Name="uio2"  Grid.Column="2"   Grid.Row="2" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14" />
+                        <BoxView Color="Gold"  Grid.Column="2"  Grid.Row="2"  x:Name="bbuio3"/>
+                        <Label Text="UIO B3"  x:Name="uio3"  Grid.Column="2"   Grid.Row="2" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="14" />
 
 
 
@@ -106,6 +108,23 @@
 
 
                 </StackLayout>
+
+                <StackLayout Grid.Row="4" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
+                    <Label
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         HorizontalTextAlignment="Center"
+                         FontSize="26"
+                         Margin="0,0,0,5"
+                         Text="_______"
+                         WidthRequest="300"
+                         VerticalOptions="CenterAndExpand"
+                         TextColor="{OnPlatform Android=Black}"
+                         />
+                </StackLayout>
+                
+                
+                
 
             </Grid>
         </ScrollView>
